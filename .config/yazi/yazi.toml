@@ -3,7 +3,7 @@
 [manager]
 # Modern schema supports both 'manager' and 'mgr'
 # We use [0, 1, 1] to ensure parent is strictly hidden
-ratio          = [ 0, 1, 1 ]
+ratio          = [ 0, 5, 5 ]
 sort_by        = "alphabetical"
 sort_sensitive = false
 sort_reverse   = false
@@ -29,7 +29,7 @@ wrap            = "yes"
 
 [opener]
 edit = [
-    { run = 'cosmic-edit "$@"', block = true, desc = "Edit" },
+    { run = 'nvim "$@"', block = true, desc = "Edit" },
 ]
 play = [
     { run = 'mpv "$@"', orphan = true, for = "unix" },
