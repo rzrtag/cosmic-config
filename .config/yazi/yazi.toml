@@ -1,8 +1,9 @@
 # ~/.config/yazi/yazi.toml
 
 [manager]
-# Zero out the parent pane for a modern dual-pane focus
-ratio          = [ 0, 4, 6 ]
+# Modern schema supports both 'manager' and 'mgr'
+# We use [0, 1, 1] to ensure parent is strictly hidden
+ratio          = [ 0, 1, 1 ]
 sort_by        = "alphabetical"
 sort_sensitive = false
 sort_reverse   = false
@@ -19,8 +20,8 @@ tab_size        = 2
 max_width       = 1600
 max_height      = 1600
 cache_dir       = ""
-# COSMIC terminal utilizes Sixel as a robust rendering layer.
-# We force sixel to bypass auto-detection timeouts.
+# FORCE Sixel to bypass terminal detection timeouts
+# This resolves the "ASCII fallback" issue in COSMIC Terminal
 image_filter    = "lanczos3"
 image_quality   = 90
 sixel_fraction  = 10
