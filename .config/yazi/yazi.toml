@@ -26,24 +26,25 @@ sixel_fraction  = 15
 wrap            = "yes"
 
 [opener]
-edit =
+edit = [
+    { run = 'cosmic-edit "$@"', block = true, desc = "Edit" },
+]
 play = [
     { run = 'mpv "$@"', orphan = true, for = "unix" },
 ]
 open = [
     { run = 'xdg-open "$@"', desc = "Open" },
 ]
-reveal =
 
 [open]
 rules = [
     { name = "*/", use = [ "edit", "open" ] },
-    { mime = "text/*", use = [ "edit", "reveal" ] },
-    { mime = "image/*", use = [ "open", "reveal" ] },
-    { mime = "video/*", use = [ "play", "reveal" ] },
-    { mime = "audio/*", use = [ "play", "reveal" ] },
-    { mime = "application/json", use = [ "edit", "reveal" ] },
-    { mime = "*", use = [ "open", "reveal" ] },
+    { mime = "text/*", use = [ "edit", "open" ] },
+    { mime = "image/*", use = [ "open" ] },
+    { mime = "video/*", use = [ "play", "open" ] },
+    { mime = "audio/*", use = [ "play", "open" ] },
+    { mime = "application/json", use = [ "edit", "open" ] },
+    { mime = "*", use = [ "open" ] },
 ]
 
 [tasks]
