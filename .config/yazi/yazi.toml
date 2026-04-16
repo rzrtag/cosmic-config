@@ -1,9 +1,9 @@
-# ~/.config/yazi/yazi.toml
+[mgr]
+# Zero out the parent pane for a modern dual-pane focus
+ratio          = [ 0, 2, 3 ]
 
 [manager]
 # Modern schema supports both 'manager' and 'mgr'
-# We use [0, 1, 1] to ensure parent is strictly hidden
-ratio          = [ 0, 5, 5 ]
 sort_by        = "alphabetical"
 sort_sensitive = false
 sort_reverse   = false

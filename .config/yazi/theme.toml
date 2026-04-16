@@ -3,6 +3,7 @@
 
 [manager]
 cwd = { fg = "#89dceb", bold = true }
+syntect_theme = "~/.config/yazi/Catppuccin-mocha.tmTheme"
 
 # OBLITERATE borders by matching foreground to background (#1e1e2e)
 border_symbol = " "
