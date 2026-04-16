@@ -1,0 +1,34 @@
+# ~/.config/yazi/theme.toml
+
+[manager]
+cwd = { fg = "blue", bold = true }
+# Obliterate borders by omitting the rendering character
+border_symbol = " "
+border_style  = { fg = "black" }
+syntect_theme = ""
+
+[status]
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "black", bg = "black" }
+mode_normal = { fg = "black", bg = "blue", bold = true }
+mode_select = { fg = "black", bg = "green", bold = true }
+mode_unset  = { fg = "black", bg = "magenta", bold = true }
+progress_label = { bold = true }
+progress_normal = { fg = "blue", bg = "black" }
+progress_error = { fg = "red", bg = "black" }
+
+[filetype]
+rules = [
+    { mime = "image/*", fg = "cyan" },
+    { mime = "video/*", fg = "yellow" },
+    { mime = "audio/*", fg = "yellow" },
+    { mime = "application/zip", fg = "magenta" },
+    { mime = "application/gzip", fg = "magenta" },
+    { mime = "application/x-tar", fg = "magenta" },
+    { mime = "application/x-bzip", fg = "magenta" },
+    { mime = "application/x-bzip2", fg = "magenta" },
+    { mime = "application/x-7z-compressed", fg = "magenta" },
+    { mime = "application/x-rar", fg = "magenta" },
+    { name = "*", fg = "white" }
+]

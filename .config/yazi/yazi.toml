@@ -1,0 +1,55 @@
+# ~/.config/yazi/yazi.toml
+
+[manager]
+# Enforce a dual-pane layout by zeroing the parent window ratio
+ratio          = [ 0, 4, 4 ]
+sort_by        = "alphabetical"
+sort_sensitive = false
+sort_reverse   = false
+sort_dir_first = true
+sort_translit  = false
+linemode       = "size"
+show_hidden    = true
+show_symlink   = true
+scrolloff      = 5
+mouse_events   = [ "click", "scroll" ]
+
+[preview]
+tab_size        = 2
+max_width       = 1200
+max_height      = 1200
+cache_dir       = ""
+# COSMIC terminal utilizes Sixel as a robust rendering layer; Kitty protocol is secondary
+image_filter    = "triangle"
+image_quality   = 85
+sixel_fraction  = 15
+wrap            = "yes"
+
+[opener]
+edit =
+play = [
+    { run = 'mpv "$@"', orphan = true, for = "unix" },
+]
+open = [
+    { run = 'xdg-open "$@"', desc = "Open" },
+]
+reveal =
+
+[open]
+rules = [
+    { name = "*/", use = [ "edit", "open" ] },
+    { mime = "text/*", use = [ "edit", "reveal" ] },
+    { mime = "image/*", use = [ "open", "reveal" ] },
+    { mime = "video/*", use = [ "play", "reveal" ] },
+    { mime = "audio/*", use = [ "play", "reveal" ] },
+    { mime = "application/json", use = [ "edit", "reveal" ] },
+    { mime = "*", use = [ "open", "reveal" ] },
+]
+
+[tasks]
+micro_workers    = 10
+macro_workers    = 25
+bizarre_retry    = 5
+image_alloc      = 536870912  # 512MB
+image_bound      = [ 0, 0 ]
+suppress_preload = false

@@ -1,0 +1,9 @@
+{
+    NoOp: "true",
+    Antigravity: "antigravity",
+    Helium: "helium",
+    CosmicEdit: "cosmic-edit",
+    VSCode: "flatpak run com.visualstudio.code",
+    Timeshift: "timeshift-launcher",
+    Files: "cosmic-files",
+}

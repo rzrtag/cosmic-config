@@ -1,0 +1,10 @@
+(
+    font_name: "FiraCode Nerd Font",
+    font_size: 14,
+    opacity: 0.85,
+    scrollback_lines: 10000,
+    theme: "System",
+    cursor_shape: Block,
+    cursor_blinking: true,
+    padding: (x: 10, y: 10),
+)

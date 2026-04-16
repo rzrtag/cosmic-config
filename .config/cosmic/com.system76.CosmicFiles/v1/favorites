@@ -1,0 +1,11 @@
+[
+    Home,
+    Documents,
+    Downloads,
+    Pictures,
+    Videos,
+    Path("/home/conrad/Templates/themes-cosmic"),
+    Path("/home/conrad/workspace"),
+    Path("/home/conrad/.gemini/antigravity"),
+    Path("/media/conrad/4TB-SG-USB/music"),
+]
