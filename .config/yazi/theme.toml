@@ -1,34 +1,88 @@
 # ~/.config/yazi/theme.toml
+# Catppuccin Mocha Theme for Yazi
 
 [manager]
-cwd = { fg = "blue", bold = true }
-# Obliterate borders by omitting the rendering character
+cwd = { fg = "#89dceb", bold = true }
+
+# Character used for pane borders (setting to space for minimal look)
 border_symbol = " "
-border_style  = { fg = "black" }
-syntect_theme = ""
+border_style  = { fg = "#313244" }
+
+# Hovered item
+hovered       = { fg = "#1e1e2e", bg = "#89b4fa" }
+# Selected items
+preview_hovered = { underline = true }
 
 [status]
-separator_open  = ""
-separator_close = ""
-separator_style = { fg = "black", bg = "black" }
-mode_normal = { fg = "black", bg = "blue", bold = true }
-mode_select = { fg = "black", bg = "green", bold = true }
-mode_unset  = { fg = "black", bg = "magenta", bold = true }
-progress_label = { bold = true }
-progress_normal = { fg = "blue", bg = "black" }
-progress_error = { fg = "red", bg = "black" }
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "#313244", bg = "#313244" }
+
+# Mode colors
+mode_normal = { fg = "#1e1e2e", bg = "#89b4fa", bold = true }
+mode_select = { fg = "#1e1e2e", bg = "#a6e3a1", bold = true }
+mode_unset  = { fg = "#1e1e2e", bg = "#f5c2e7", bold = true }
+
+# Progress bar
+progress_label  = { fg = "#ffffff", bold = true }
+progress_normal = { fg = "#89b4fa", bg = "#313244" }
+progress_error  = { fg = "#f38ba8", bg = "#313244" }
+
+# Permissions
+permissions_t = { fg = "#89b4fa" }
+permissions_r = { fg = "#f9e2af" }
+permissions_w = { fg = "#f38ba8" }
+permissions_x = { fg = "#a6e3a1" }
+permissions_s = { fg = "#7f849c" }
 
 [filetype]
 rules = [
-    { mime = "image/*", fg = "cyan" },
-    { mime = "video/*", fg = "yellow" },
-    { mime = "audio/*", fg = "yellow" },
-    { mime = "application/zip", fg = "magenta" },
-    { mime = "application/gzip", fg = "magenta" },
-    { mime = "application/x-tar", fg = "magenta" },
-    { mime = "application/x-bzip", fg = "magenta" },
-    { mime = "application/x-bzip2", fg = "magenta" },
-    { mime = "application/x-7z-compressed", fg = "magenta" },
-    { mime = "application/x-rar", fg = "magenta" },
-    { name = "*", fg = "white" }
+    # Images
+    { mime = "image/*", fg = "#89dceb" },
+    # Videos
+    { mime = "video/*", fg = "#f9e2af" },
+    # Audio
+    { mime = "audio/*", fg = "#f9e2af" },
+    # Archives
+    { mime = "application/{tar,bzip*,7z*,zip,rar}", fg = "#f5c2e7" },
+    # Code
+    { mime = "text/*", fg = "#cdd6f4" },
+    # Fallback
+    { name = "*", fg = "#cdd6f4" }
 ]
+
+[input]
+border   = { fg = "#89b4fa" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+[select]
+border   = { fg = "#89b4fa" }
+active   = { fg = "#f5c2e7" }
+inactive = {}
+
+[tasks]
+border   = { fg = "#89b4fa" }
+title    = {}
+hovered  = { underline = true }
+
+[which]
+mask            = { bg = "#313244" }
+cand            = { fg = "#89dceb" }
+rest            = { fg = "#9399b2" }
+desc            = { fg = "#f5c2e7" }
+separator       = " ➜ "
+separator_style = { fg = "#585b70" }
+
+[help]
+on      = { fg = "#f5c2e7" }
+run     = { fg = "#89dceb" }
+desc    = { fg = "#9399b2" }
+hovered = { bg = "#585b70", bold = true }
+footer  = { fg = "#313244", bg = "#cdd6f4" }
+
+[notify]
+title_info  = { fg = "#a6e3a1" }
+title_warn  = { fg = "#f9e2af" }
+title_error = { fg = "#f38ba8" }
